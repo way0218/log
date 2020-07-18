@@ -5,10 +5,12 @@ import (
 )
 
 func TestLogOut(t *testing.T) {
+	Debug("Debug")
 	Error("Error")
+	SetLevel(-8)
 	Info("Info")
 	Warn("Warn")
-	SetLevel(9)
+	Fatal("Fatal")
 
 	defaultLogger := NewLogger("stderr", -2, 0, true)
 	defaultLogger.Debug("Debug")
